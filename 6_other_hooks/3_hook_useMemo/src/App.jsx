@@ -22,7 +22,13 @@ function App() {
   */
   const security = useMemo(() => {
     return passwordSecurity(password)
-  }, [password])  
+  }, [password])
+
+
+  /* 	Si on veut generer un nombre aleatoire qui ne change pas
+  		pendant la duree de vie du composant on peut par exemple :
+  		const random = useMemo(() => Math.ramdom(), [])
+  */
 
   /* Voir dans Input, l'utilsation du hook useId()*/
   return <div className='container my-3 vstack gap-2'>
